@@ -1,6 +1,9 @@
 [versions]
+accompanistPager = "0.34.0"
 agp = "8.9.2"
 converterGson = "3.0.0"
+foundation = "1.8.3"
+foundationAndroid = "1.8.3"
 kotlin = "2.0.21"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -12,7 +15,10 @@ composeBom = "2024.09.00"
 retrofit = "3.0.0"
 
 [libraries]
+accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanistPager" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-foundation-android = { module = "androidx.compose.foundation:foundation-android", version.ref = "foundationAndroid" }
+androidx-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "foundation" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
