@@ -13,6 +13,9 @@ class CalculatorViewModel : ViewModel() {
         private set
 
     fun onAction(action: CalculatorActions) {
+        state = state.copy(
+            result = ""
+        )
         when (action) {
             is CalculatorActions.Number -> enterNumber(action.number)
             is CalculatorActions.Decimal -> enterDecimal()
@@ -51,7 +54,8 @@ class CalculatorViewModel : ViewModel() {
                 null -> return
             }
             state = state.copy(
-                number1 = result.toString().take(15),
+                result = result.toString().take(15),
+                number1 = "",
                 number2 = "",
                 operation = null
             )

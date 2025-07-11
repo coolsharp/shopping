@@ -34,23 +34,26 @@ private const val ADD = "+"
 private const val EQUAL = "="
 private const val DECIMAL = "."
 
+/**
+ * 계산기 함수
+ */
 @Composable
 fun Calculator(
-    state: CalculatorState,
-    buttonSpacing: Dp = 8.dp,
-    modifier: Modifier = Modifier,
-    onAction: (CalculatorActions) -> Unit
+    state: CalculatorState, // 계산기 상태 데이터 클레스
+    buttonSpacing: Dp = 8.dp, // 버튼 간격
+    modifier: Modifier = Modifier, // 수정자
+    onAction: (CalculatorActions) -> Unit // 버튼 클릭 엑션
 ) {
-    Box(modifier = modifier) {
-        Column(
+    Box(modifier = modifier) { // Box 생성
+        Column( // Column
             modifier = Modifier
                 .fillMaxWidth()
-                .align(Alignment.BottomCenter),
+                .align(Alignment.BottomCenter), // 바닥 센터 정렬
             verticalArrangement = Arrangement.spacedBy(buttonSpacing)
         ) {
             // Display
             Text(
-                text = "${state.number1} ${state.operation?.symbol ?: ""} ${state.number2}".trim(),
+                text = "${state.result} ${state.number1} ${state.operation?.symbol ?: ""} ${state.number2}".trim(),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 32.dp),
@@ -82,7 +85,7 @@ fun Calculator(
                             else -> 1f
                         }
 
-                        CalcuratorButton(
+                        CalculatorButton(
                             symbol = symbol,
                             modifier = Modifier
                                 .aspectRatio(buttonWeight)
