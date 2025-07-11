@@ -1,9 +1,12 @@
-package com.coolsharp.shopping.ui
+package com.coolsharp.shopping.viewmodel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import com.coolsharp.shopping.ui.CalculatorActions
+import com.coolsharp.shopping.ui.CalculatorOperation
+import com.coolsharp.shopping.ui.CalculatorState
 
 class CalculatorViewModel : ViewModel() {
     var state by mutableStateOf(CalculatorState())
