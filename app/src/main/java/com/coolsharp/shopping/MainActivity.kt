@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.coolsharp.shopping.ui.Calculator
 import com.coolsharp.shopping.ui.CalculatorActions
+import com.coolsharp.shopping.ui.ProfileScreen
 import com.coolsharp.shopping.viewmodel.CalculatorViewModel
 import com.coolsharp.shopping.ui.theme.ShoppingTheme
 
@@ -26,16 +27,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ShoppingTheme {
-                val viewModel = viewModel<CalculatorViewModel>()
-                val state = viewModel.state
-                val buttonSpacing = 8.dp
-                Calculator(
-                    state = state,
-                    onAction = viewModel::onAction,
-                    buttonSpacing = buttonSpacing,
-                    modifier = Modifier
-                        .fillMaxSize()
-                )
+                ProfileScreen()
             }
         }
     }
