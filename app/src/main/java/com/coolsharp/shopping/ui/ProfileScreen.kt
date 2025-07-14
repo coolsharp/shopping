@@ -52,14 +52,14 @@ import androidx.compose.ui.unit.sp
 import com.coolsharp.shopping.R
 
 @Composable
-fun ProfileScreen() {
+fun ProfileScreen(modifier: Modifier = Modifier) {
     var selectedTabIndex by remember {
         mutableStateOf(0)
     }
 
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(modifier = modifier.fillMaxSize()) {
         TopBar(
-            name = "coolsharp official", modifier = Modifier.padding(20.dp)
+            name = "coolsharp official", modifier = Modifier.padding(10.dp)
         )
         Spacer(modifier = Modifier.height(4.dp))
         ProfileSection()
