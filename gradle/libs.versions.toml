@@ -1,6 +1,8 @@
 [versions]
 accompanistPager = "0.34.0"
+activityComposeVersion = "1.7.2"
 agp = "8.9.2"
+constraintlayoutCompose = "1.1.1"
 converterGson = "3.0.0"
 foundation = "1.8.3"
 foundationAndroid = "1.8.3"
@@ -17,6 +19,8 @@ retrofit = "3.0.0"
 
 [libraries]
 accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "accompanistPager" }
+androidx-activity-compose-v172 = { module = "androidx.activity:activity-compose", version.ref = "activityComposeVersion" }
+androidx-constraintlayout-compose = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "constraintlayoutCompose" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-foundation-android = { module = "androidx.compose.foundation:foundation-android", version.ref = "foundationAndroid" }
 androidx-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "foundation" }
